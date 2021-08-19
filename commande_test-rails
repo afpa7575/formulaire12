@@ -1,0 +1,17 @@
+rails new test_rails
+
+app sample
+
+rails generate scaffold User name:string email:string
+rails db:migrate
+
+rails generate scaffold Micropost content:text user_id:integer
+rails db:migrate
+
+heroku run rails db:migrate
+
+app sample2
+
+
+rails generate model User name:string email:string
+rails destroy model User
